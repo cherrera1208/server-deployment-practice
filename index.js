@@ -1,9 +1,9 @@
 'use strict';
 
-const express = required('express');
+const express = require('express');
 const app = express();
 
-app.get('params/:name', (req, res) => {
+app.get('/params/:name', (req, res) => {
   let name = req.params.name;
   res.json({
     name,
@@ -15,13 +15,13 @@ app.get('/query', (req, res) => {
   let role = req.query.role;
   res.json({
     name,
-    role
+    role,
   });
 });
 
 app.get('/hello', (req, res) => {
   res.json({
-    name: '',
+    name: 'CARLOS',
   });
 });
 
